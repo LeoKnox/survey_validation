@@ -1,0 +1,17 @@
+@model survey_validation.Models.User
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Valid Survey</title>
+    </head>
+    <body>
+        <h2>Submitted info</h2>
+        <p>Name: @Model.uname</p>
+        <p>Location: @Model.location</p>
+        <p>Language: @Model.language</p>
+        <p>Comments: @Model.comment</p>
+    </body>
+    <a href="/" type="button">Go Back</a>
+</html>

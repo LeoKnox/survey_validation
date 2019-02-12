@@ -1,0 +1,35 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using survey_validation.Models
+@model User
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Valid Survey</title>
+    </head>
+    <body>
+        <h2>Enter Data!</h2>
+        <form asp-action="Valid" asp-controller="Hello" method="post">
+            <span asp-validation-for="uname"></span>
+            <label asp-for="uname"></label>
+            <input asp-for="uname"><br>
+            <span asp-validation-for="location"></span>
+            <label asp-for="location"></label>
+            <select asp-for="location">
+                <option value="Seattle">Seattle</option>
+                <option value="Beyond the Walll">Beyond the Wall</option>
+            </select><br>
+            <span asp-validation-for="language"></span>
+            <label asp-for="language"></label>
+            <select asp-for="language">
+                <option value="C#">C#</option>
+                <option value="Visual Basic">Visual Basic</option>
+            </select><br>
+            <span asp-validation-for="comment"></span>
+            <label asp-for="comment"></label>
+            <input asp-for="comment"><br>
+            <input value = "Submit" type="submit">
+        </form>
+    </body>
+</html>
